@@ -5,7 +5,8 @@
 
 body {
   font-size: 15pt;
-  background: #000000A8
+  background: #000000A8;
+  height : 1000px;
 }
 
 .btn {
