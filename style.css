@@ -65,7 +65,9 @@ a:hover {
   outline: 1px solid limegreen;
   color: #39CDE4;
 }
-p{
+
+p,
+ms{
   font-family: 'Amiri', serif;
   font-size: 25px;
   padding: 15px;
@@ -78,4 +80,12 @@ p{
   outline: 4px solid #00FFEF9C;
   display: none;
   background: #0076FF9C;
+}
+.ms{
+  font-style: 20px;
+  width: 50%;
+  margin: 0 20%;
+  display: block;
+  height: 37px;
+  padding: 6px;
 }
