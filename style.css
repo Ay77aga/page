@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
+  margin: 5px;
 }
 
 body {
@@ -14,24 +14,25 @@ body {
   outline: 5px solid #56FCB8DE;
   position: fixed;
   top: 400px;
-  right: 30px;
+  right: 100px;
   z-index: 99;
   background: #006A9896;
 
 }
-
 .mynav {
   padding: 0 3.5px;
 }
 
 .nav {
-  background: rgb(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0, 0.5);
   color: snow;
   direction: none;
   overflow: scroll;
   position: fixed;
   width: 0;
   height: 0;
+  top: 40px;
+  left: 59px;
   text-align: center;
   transition: 1s;
 
@@ -42,15 +43,30 @@ body {
   outline-color: #FF00009C;
 }
 
-a {
+a{
   color: snow;
   text-decoration: none;
   font-size: 30px;
   padding: 3px 40%;
 
 }
-
+.click_me{
+  background: #0BA4EE99;
+  font-size: 30px;
+  border: none;
+  outline: #0BEE84AD;
+}
 a:hover {
   outline: 1px solid limegreen;
   color: #39CDE4;
+}
+p{
+  font-size: 35px;
+  margin: 150px 0px;
+  width: 100%;
+  text-align: right;
+  font-weight: bolder;
+  color: snow;
+  border: 3px solid #00D3FF82;
+  display: none;
 }

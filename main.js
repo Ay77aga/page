@@ -1,6 +1,20 @@
 let btn_nav = document.querySelector('.mynav'), //                  .             .
   open_nav = document.querySelector('.nav'),
-  close_btn = document.querySelector('.close');
+  close_btn = document.querySelector('.close'),
+  click_me = document.querySelector('.click_me'),
+  msgt = document.querySelector('.msg_text');
+let ayat = ['‏وَأَقِمْنَ الصَّلاةَ وَآتِينَ الزَّكَاةَ ',
+            '‏أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَىٰ قُلُوبٍ أَقْفَالُهَا',
+            '‏وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ',
+            ' إِنَّ الْحَسَنَاتِ يُذْهِبْنَ السَّيِّئَاتِ ۚ ذَٰلِكَ ذِكْرَىٰ لِلذَّاكِرِينَ ',
+            '‏وَلا تُطِع مَن أَغفَلنا قَلبَهُ عَن ذِكرِنا وَاتَّبَعَ هَواهُ وَكانَ أَمرُهُ فُرُطًا',
+            '‏وَاصْبِرُواْ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ',
+            '‏وَمَن يُؤْمِن بِاللَّهِ يَهْدِ قَلْبَهُ',
+            'وَلا تَتَّبِعِ الْهَوَى فَيُضِلَّكَ عَن سَبِيلِ اللَّه',
+            '‏مَنْ كَانَ يَرْجُو لِقَاءَ اللَّهِ فَإِنَّ أَجَلَ اللَّهِ لَآتٍ ۚ وَهُوَ السَّمِيعُ الْعَلِيمُ',
+            '‏وَمَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَإِنَّ اللَّهَ عَزِيزٌ حَكِيمٌ',
+            '‏وَأَطِيعُوا اللَّهَ وَرَسُولَهُ وَلَا تَنَازَعُوا فَتَفْشَلُوا وَتَذْهَبَ رِيحُكُمْ ۖ'];
+let rund = Math.floor(Math.random() * 10);
 
 btn_nav.onclick = function nav_open() {
   open_nav.style = ` width : 200px; height: 200px;
@@ -12,4 +26,15 @@ close_btn.onclick = function close() {
   open_nav.style = ` width: 0;height :0; border: none;`;
   close_btn.style.display = 'none';
   btn_nav.style.display = 'block';
+}
+click_me.onclick = function msg() {
+  open_nav.style = ` width: 0;height :0; border: none;`;
+  close_btn.style.display = 'none';
+  btn_nav.style.display = 'block';
+  msgt.style.display = 'block';
+  rund++;
+  if (rund > 10) {
+    rund = 0;
+  }
+  msgt.innerHTML = ayat[rund];
 }
