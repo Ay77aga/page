@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 15pt;
+  background: #000000A8
+}
+
+.btn {
+  font-size: 40px;
+  border: none;
+  outline: 5px solid #56FCB8DE;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  background: #006A9896;
+
+}
+
+.mynav {
+  padding: 0 3.5px;
+}
+
+.nav {
+  background: rgb(0, 0, 0, 0.9);
+  color: snow;
+  direction: none;
+  overflow: scroll;
+  position: fixed;
+  width: 0;
+  height: 0;
+  text-align: center;
+  transition: 1s;
+
+}
+
+.close {
+  display: none;
+  outline-color: #FF00009C;
+}
+
+a {
+  color: snow;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 3px 40%;
+
+}
+
+a:hover {
+  outline: 1px solid limegreen;
+  color: #39CDE4;
+}
