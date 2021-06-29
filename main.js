@@ -34,7 +34,7 @@ click_me.onclick = function msg() {
   btn_nav.style.display = 'block';
   msgt.style.display = 'block';
   rund++;
-  if (rund >= 11) {
+  if (rund > 11) {
     rund = 0;
   }
   msgt.innerHTML = ayat[rund];
