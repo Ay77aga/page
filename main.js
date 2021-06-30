@@ -39,10 +39,8 @@ click_me.onclick = function msg() {
   btn_nav.style.display = 'block';
   msgt.style.display = 'block';
   
-  let rund = Math.floor(Math.random() * ayat.length - 1);
+  let rund = Math.floor(Math.random() * ayat.length );
   
-  if (rund > ayat.length - 1) {
-    rund = 0;
-  }
+  
   msgt.innerHTML = ayat[rund];
 }
