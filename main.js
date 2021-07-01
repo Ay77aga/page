@@ -1,8 +1,3 @@
-let btn_nav = document.querySelector('.mynav'), //                  .             .
-  open_nav = document.querySelector('.nav'),
-  close_btn = document.querySelector('.close'),
-  click_me = document.querySelector('.click_me'),
-  msgt = document.querySelector('.msg_text');
 let ayat = ['وَقَرْنَ فِي بُيُوتِكُنَّ وَلَا تَبَرَّجْنَ تَبَرُّجَ الْجَاهِلِيَّةِ الْأُولَىٰ ۖ وَأَقِمْنَ الصَّلَاةَ وَآتِينَ الزَّكَاةَ وَأَطِعْنَ اللَّهَ وَرَسُولَهُ ۚ إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيرًا',
             '‏أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَىٰ قُلُوبٍ أَقْفَالُهَا',
             '‏وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ',
@@ -16,31 +11,25 @@ let ayat = ['وَقَرْنَ فِي بُيُوتِكُنَّ وَلَا تَب�
             '‏وَأَطِيعُوا اللَّهَ وَرَسُولَهُ وَلَا تَنَازَعُوا فَتَفْشَلُوا وَتَذْهَبَ رِيحُكُمْ ۖ,',
             'صلِّ على سيدنا محمد',
             'إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ ۚ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ وَسَلِّمُوا تَسْلِيمًا'
-            
             ];
 
+let open_msg = document.querySelector('.open_msg'),
+  msg_box = document.querySelector('.msg_box'),
+  hiden_msg = document.querySelector('.hiden_msg');
 
+// ************************************************.
+open_msg.onclick = function() {
+  msg_box.style.display = 'block';
+  let rand = Math.floor(Math.random() * ayat.length);
+  msg_box.innerHTML = ayat[rand];
+  msg_box.classList.add('hi');
+  open_msg.style.display = 'none';
 
-
-btn_nav.onclick = function nav_open() {
-  open_nav.style = ` width : 200px; height: 200px;
-      border: 6px solid #0D78A4AB;`;
-  btn_nav.style.display = 'none';
-  close_btn.style.display = 'block';
+  hiden_msg.style.display = 'block';
 }
-close_btn.onclick = function close() {
-  open_nav.style = ` width: 0;height :0; border: none;`;
-  close_btn.style.display = 'none';
-  btn_nav.style.display = 'block';
-}
-click_me.onclick = function msg() {
-  open_nav.style = ` width: 0;height :0; border: none;`;
-  close_btn.style.display = 'none';
-  btn_nav.style.display = 'block';
-  msgt.style.display = 'block';
-  
-  let rund = Math.floor(Math.random() * ayat.length );
-  
-  
-  msgt.innerHTML = ayat[rund];
+hiden_msg.onclick = function() {
+  open_msg.style.display = 'block';
+  msg_box.classList.remove('hi');
+  hiden_msg.style.display = 'none';
+  msg_box.innerHTML = '';
 }
