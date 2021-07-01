@@ -57,10 +57,11 @@ body {
 .ms {
   display: block;
   width: 0%;
-  max-height: 60px;
+  max-height: 55px;
   padding: 0px;
   border-width: 0px;
   border-radius: 2rem;
+  overflow-y: hidden;
 }
 
 @keyframes hh {
